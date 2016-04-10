@@ -9,8 +9,8 @@ import statsmodels.formula.api as smf
 import numpy as np
 
  
-externalModelsNames = ['w2v_small','w2v_big']
-# externalModelsNames = ['w2v_uk1','w2v_big','w2v_ukfull','gloveWG100','gloveTW100']
+# externalModelsNames = ['w2v_small','w2v_big']
+externalModelsNames = ['w2v_uk1','w2v_big','w2v_ukfull','gloveWG100','gloveTW100']
 
     
 def runSeries(nrTF=0,inline=0,summaryFile=None):
