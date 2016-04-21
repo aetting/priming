@@ -12,9 +12,9 @@ import numpy as np
 # externalModelsNames = ['w2v_small','w2v_big']
 externalModelsNames = ['w2v_uk1','w2v_big','w2v_ukfull','gloveWG100','gloveTW100']
 
-simdir = '/Users/allysonettinger/Desktop/meaning_cc/priming/similarity-sets'
+simdir = os.path.abspath('similarity-sets')
 simFileNames = [os.path.join(simdir,e) for e in os.listdir(simdir) if re.match('\w',e)]
-elpFile = '/Users/allysonettinger/Desktop/meaning_cc/priming/elp-full.csv'
+elpFile = os.path.abspath('elp-full.csv')
 
     
 def runSeries(nrTF=0,inline=0,summaryFile=None,modsOnly=False):
