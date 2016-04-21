@@ -1,0 +1,73 @@
+Lapesa & Evert 2013 
+
+-large scale evaluation study of BOW distributional models on data from three priming studies. evaluate impact of different parameters on prediction of priming. (use linear models with performance (accuracy or correlation) as a dependent variable and various model parameters as independent variables)
+-DSMs evaluated in this study belong to the class of bag-of-words models: the distributional vector of a target word consists of co-occurrence counts with other words, resulting in a word-word co- occurrence matrix
+-tasks: 1) identification of consistent primes based on their semantic relatedness to the target 2) correlation of semantic relatedness with latency times
+-priming data: 
+~Feretti et al 2001, verbs facilitate processing of nouns denoting prototypical participants. animacy decision times for priming of participants, LDT for priming of instruments?
+~McRae et al 2004, nouns found to facilitate processing of verbs denoting events in which they are prototypical participants. naming latency.
+~Hare et al 2009, facilitation effect from nouns to nouns denoting events or their participants. animacy/concreteness decision times. 
+Forward association (rank of target among the nearest neighbors of the prime) performs better than distance in both tasks
+
+——————
+
+Jones et al 2006 
+
+-(intro has nice discussion of semantic overlap vs spreading activation, localist vs distributed models)
+-introduce a holographic model of the lexicon that learns word meaning and order information from experience with a large text corpus
+-compare the similarity structure of representations learned by the holographic model, Latent Semantic Analysis, and the Hyperspace Analogue to Language at predicting human data in a variety of semantic, associated, and mediated priming experiments. (trained all on same corpus)
+-task: do the models predict facilitation in the various conditions of the study? do they predict significantly more facilitation in conditions with more facilitation? (similarity between vectors for the related prime-target pairs was subtracted from the similarity between vectors for the same target word and an unrelated prime. cosine for LSA and BEAGLE, Euclidean distance for HAL. The unrelated condition was simulated by pairing the same target word with a randomly selected prime word from the same set)
+(To make predictions from semantic space models, we prefer data from ***naming studies***. The magnitude of effects found in lexical decision can be task specific, largely depending on the nature of the non-word foils used (Neely, 1991), and we cannot simulate non-words in a semantic space model.)
+-priming data: semantic and associative priming, mediated priming, long-distance mediated priming
+~Chiarello, semantic only or associated only. Exp 2, naming latency.
+~Ferrand&New, semantic only or associated only. LDT.
+~Williams, semantically similar (not assoc), category coordinates, phrase collocates, associates that aren’t phrasal collocates. (hard to tell which task they simulated. abstract suggests williams did naming, naming with degraded target presentation, and also LDT with masked priming)
+~Moss et al, relationship type (categorical, functional), normative association (assoc or not). within categorical, for each of assoc and non-assoc, had natural (associated: thunder–lightning, non- associated: aunt–nephew) and artificial (associated: bat–ball, non-associated: dagger–spear) categories. within functional, for each of assoc and non, had script (associated: beach–sand, non-associated: party–music) or instrumental (associated: bow–arrow, non-associated: broom–floor) relations. auditory LDT.
+
+found that both word context and word order information are necessary to account for trends in the human data. going to need to go back to paper for more detail than that …
+
+——————
+
+Pado Lapata 2007
+-introduce novel framework for construct- ing semantic spaces that takes syntactic relations into account.
+-evaluate our framework on a range of tasks relevant for cognitive science and natural language processing: semantic priming, synonymy detection, and word sense disambiguation
+-priming data: Hodgson (1991)
+
+[Hodgson set out to investigate which types of lexical relations induce priming. He collected a set of 144 word pairs exemplifying six different lexical relations: (a) synonymy (words with the same meaning, e.g., value and worth); (b) superordination and subordination (one word is an instance of the kind expressed by the other word, e.g., pain and sensation); (c) category coordination (words which express two instances of a common superordinate concept, e.g., truck and train); (d) antonymy (words with opposite meaning, e.g., friend and enemy); (e) conceptual association (the first word subjects produce in free association given the other word, e.g., leash and dog); and (f) phrasal association (words which co-occur in phrases, e.g., private and property). The pairs covered the most prevalent parts of speech (adjectives, verbs, and nouns); they were selected to be unambiguous examples of the relation type they instantiate and were matched for frequency. Hogdson found equivalent priming effects (i.e., reduced reading times) for all six types of lexical relation, indicating that priming was not restricted to particular types of prime–target relation.]
+
+-task: prime-target pairs as items, independent vars=lexical relation type and prime type (rel, unrel). depvar=VSM distance between prime and target. compare distances between related and unrelated pairs. (emulated the unrelated pairs as described in McDonald and Brew (2004), by using the average distance of a target to all other primes of the same relation)
+
+-compared against state-of-the art word-based vector space model, uses words as basis elements, and assumes that all words are given equal weight. trained the word-based model on the same corpus as the dependency-based model (the complete BNC) and selected parameters that have been considered “optimal” in the literature. (check back for more details)
+
+find reliable prime type effect (successfully simulated priming), no main effect of lexical relation. found larger effect size (eta squared) for their dependency model.
+
+—————
+
+Herdagdelen et al 2009
+-compare vector space models and graph random walk models on standard tasks of predicting human similarity ratings, concept categorization, and semantic priming, varying the size of the dataset from which vector space and graph are extracted
+-use SVD/co-occurrence matrices (check back fro details)
+-priming data: Hodgson (1991) (not sure LDT or naming)
+-task: like P&L, measure the similarity of each related target-prime pair, and we compare it to the average similarity of the target to all the other primes instantiating the same relation, treating the latter quantity as our surrogate of an unrelated target-prime pair. -report results in terms of differences between unrelated and related pairs 
+-even though the SVD-based and pure-vector models are among the top achievers in general, we see that in different tasks different random walk models achieve comparable or even better performances. In particular, for phrasal associates and conceptual associates, the best results are obtained by random walks based on direct measures. 
+
+———
+
+McDonald and Brew 2004
+
+-computational model of contextual facilitation based on word co-occurrence vectors 
+-use semantic space defined by 500 most frequent content words in spoken portion of BNC, with five-word window on either side of word
+-ICE model: Incremental Construction of semantic Expectation. maintains vector of probabilities as its representation of the current best guess about the likely location in semantic space of the coming word. Bayesian. 
+-uses relative entropy as primary dependent variable in simulations
+-single word priming data: Hodgson (1991) **LDT**. removed 48 of 144 pairs. 
+-task: difference in ICE values (relative entropy) resulting from influence of related vs unrelated primes on posterior distribution, should correspond to diff in LDT in Hodgson. value for unrelated item was computed as mean of ICE values for target word paired with each of other primes in related condition
+
+2-way ANOVA: main effect of context, relative entropy significantly less when related prime than unrelated. no main effect of lexical relation, no interaction. consistent priming effects within all six relations. 
+
+
+
+
+———
+
+Lund et al 1995
+
+Landauer and Dumais: “… Lund, Burgess and colleagues, who have mimicked other priming data using a high-dimensional semantic model, HAL, that is related to LSA. Lund et al. derived 200 element vectors to represent words from analysis of 160 million words from Usenet newsgroups. They first formed a word-word matrix from a 10- word sliding window in which the co-occurrence of each pair of words was weighted inversely with the number of intervening words. They reduced the resulting 70,000-by-70,000 matrix to one of 70,000 by 200 simply by selecting only the 200 columns (following words) with the highest variance. In a series of simulations and experiments, they have been able to mimic se- mantic priming results that contrast pairs derived from free- association norms and pairs with intuitively similar meanings, interpreting their high-dimensional word vectors as representing primarily (judged) semantic relatedness.”

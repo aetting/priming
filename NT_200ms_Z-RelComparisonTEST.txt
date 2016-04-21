@@ -1,0 +1,490 @@
+
+PREDICTOR MODEL: LSA
+
+ALL ITEMS
+t: -7.623096,p: 0.000000
+R-squared: 0.008922
+R-squared (adj): 0.008769
+
+Spearman rho: -0.152452, p: 0.000000
+Pearson R: -0.127934, p: 0.000000
+
+
+PREDICTOR MODEL: w2v_small
+
+ALL ITEMS
+t: -2.501025,p: 0.012408
+R-squared: 0.000968
+R-squared (adj): 0.000813
+
+Spearman rho: -0.036562, p: 0.003302
+Pearson R: -0.037690, p: 0.002455
+
+
+PREDICTOR MODEL: w2v_big
+
+ALL ITEMS
+t: -3.778452,p: 0.000159
+R-squared: 0.002207
+R-squared (adj): 0.002052
+
+Spearman rho: -0.062952, p: 0.000000
+Pearson R: -0.061883, p: 0.000001
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: synonym
+TOTAL ITEMS: 703
+t: -1.726772,p: 0.084648
+R-squared: 0.004230
+R-squared (adj): 0.002811
+
+Spearman rho: -0.064362, p: 0.088153
+Pearson R: -0.065035, p: 0.084871
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: synonym
+TOTAL ITEMS: 703
+t: 2.736023,p: 0.006376
+R-squared: 0.010551
+R-squared (adj): 0.009142
+
+Spearman rho: 0.089158, p: 0.018057
+Pearson R: 0.102718, p: 0.006414
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: synonym
+TOTAL ITEMS: 703
+t: 1.238609,p: 0.215904
+R-squared: 0.002181
+R-squared (adj): 0.000759
+
+Spearman rho: 0.040494, p: 0.283632
+Pearson R: 0.046697, p: 0.216232
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: antonym
+TOTAL ITEMS: 238
+t: -1.607520,p: 0.109272
+R-squared: 0.010786
+R-squared (adj): 0.006612
+
+Spearman rho: -0.118868, p: 0.067153
+Pearson R: -0.103855, p: 0.110024
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: antonym
+TOTAL ITEMS: 238
+t: -0.526016,p: 0.599369
+R-squared: 0.001166
+R-squared (adj): -0.003048
+
+Spearman rho: -0.056184, p: 0.388205
+Pearson R: -0.034148, p: 0.600142
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: antonym
+TOTAL ITEMS: 238
+t: -0.931235,p: 0.352680
+R-squared: 0.003646
+R-squared (adj): -0.000558
+
+Spearman rho: -0.073232, p: 0.260450
+Pearson R: -0.060380, p: 0.353700
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: fpa
+TOTAL ITEMS: 381
+t: -1.420263,p: 0.156351
+R-squared: 0.005280
+R-squared (adj): 0.002663
+
+Spearman rho: -0.078805, p: 0.124649
+Pearson R: -0.072665, p: 0.156898
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: fpa
+TOTAL ITEMS: 381
+t: -1.134458,p: 0.257318
+R-squared: 0.003375
+R-squared (adj): 0.000753
+
+Spearman rho: -0.027024, p: 0.598989
+Pearson R: -0.058098, p: 0.257945
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: fpa
+TOTAL ITEMS: 381
+t: -0.220803,p: 0.825364
+R-squared: 0.000128
+R-squared (adj): -0.002503
+
+Spearman rho: 0.003293, p: 0.948924
+Pearson R: -0.011326, p: 0.825591
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: script
+TOTAL ITEMS: 180
+t: 0.234134,p: 0.815149
+R-squared: 0.000306
+R-squared (adj): -0.005279
+
+Spearman rho: 0.041283, p: 0.582151
+Pearson R: 0.017497, p: 0.815658
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: script
+TOTAL ITEMS: 180
+t: -2.012447,p: 0.045672
+R-squared: 0.022125
+R-squared (adj): 0.016662
+
+Spearman rho: -0.129266, p: 0.083727
+Pearson R: -0.148744, p: 0.046282
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: script
+TOTAL ITEMS: 180
+t: -0.489316,p: 0.625217
+R-squared: 0.001336
+R-squared (adj): -0.004243
+
+Spearman rho: -0.021657, p: 0.772911
+Pearson R: -0.036549, p: 0.626188
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: unclassified
+TOTAL ITEMS: 679
+t: -1.483511,p: 0.138403
+R-squared: 0.003236
+R-squared (adj): 0.001765
+
+Spearman rho: -0.064012, p: 0.095587
+Pearson R: -0.056882, p: 0.138695
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: unclassified
+TOTAL ITEMS: 679
+t: 1.427242,p: 0.153970
+R-squared: 0.002995
+R-squared (adj): 0.001525
+
+Spearman rho: 0.027499, p: 0.474377
+Pearson R: 0.054731, p: 0.154275
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: unclassified
+TOTAL ITEMS: 679
+t: 1.514393,p: 0.130392
+R-squared: 0.003371
+R-squared (adj): 0.001901
+
+Spearman rho: 0.041066, p: 0.285272
+Pearson R: 0.058062, p: 0.130676
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: category
+TOTAL ITEMS: 301
+t: -1.557919,p: 0.120307
+R-squared: 0.008025
+R-squared (adj): 0.004719
+
+Spearman rho: -0.121345, p: 0.035354
+Pearson R: -0.089585, p: 0.120928
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: category
+TOTAL ITEMS: 301
+t: -0.079242,p: 0.936893
+R-squared: 0.000021
+R-squared (adj): -0.003312
+
+Spearman rho: -0.013753, p: 0.812178
+Pearson R: -0.004575, p: 0.936998
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: category
+TOTAL ITEMS: 301
+t: -1.001129,p: 0.317571
+R-squared: 0.003330
+R-squared (adj): 0.000008
+
+Spearman rho: -0.086167, p: 0.135829
+Pearson R: -0.057704, p: 0.318381
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: -1.691740,p: 0.092309
+R-squared: 0.014612
+R-squared (adj): 0.009507
+
+Spearman rho: -0.111061, p: 0.123151
+Pearson R: -0.120881, p: 0.093160
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: -1.347848,p: 0.179287
+R-squared: 0.009325
+R-squared (adj): 0.004192
+
+Spearman rho: -0.064136, p: 0.374295
+Pearson R: -0.096567, p: 0.180421
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: -0.442621,p: 0.658535
+R-squared: 0.001014
+R-squared (adj): -0.004162
+
+Spearman rho: -0.000450, p: 0.995037
+Pearson R: -0.031844, p: 0.659367
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: instrument
+TOTAL ITEMS: 42
+t: -1.050589,p: 0.299601
+R-squared: 0.026215
+R-squared (adj): 0.002464
+
+Spearman rho: -0.134117, p: 0.397116
+Pearson R: -0.161910, p: 0.305643
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: instrument
+TOTAL ITEMS: 42
+t: -0.088503,p: 0.929908
+R-squared: 0.000191
+R-squared (adj): -0.024195
+
+Spearman rho: -0.021636, p: 0.891820
+Pearson R: -0.013821, p: 0.930776
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: instrument
+TOTAL ITEMS: 42
+t: -0.718991,p: 0.476225
+R-squared: 0.012451
+R-squared (adj): -0.011635
+
+Spearman rho: -0.109153, p: 0.491388
+Pearson R: -0.111586, p: 0.481720
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: functional property
+TOTAL ITEMS: 101
+t: -0.309422,p: 0.757644
+R-squared: 0.000957
+R-squared (adj): -0.009034
+
+Spearman rho: -0.019435, p: 0.847036
+Pearson R: -0.030927, p: 0.758827
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: functional property
+TOTAL ITEMS: 101
+t: -0.075223,p: 0.940188
+R-squared: 0.000057
+R-squared (adj): -0.009943
+
+Spearman rho: -0.012965, p: 0.897614
+Pearson R: -0.007522, p: 0.940488
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: functional property
+TOTAL ITEMS: 101
+t: -0.329562,p: 0.742420
+R-squared: 0.001085
+R-squared (adj): -0.008904
+
+Spearman rho: -0.006942, p: 0.945067
+Pearson R: -0.032938, p: 0.743672
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: bpa
+TOTAL ITEMS: 209
+t: -1.985498,p: 0.048403
+R-squared: 0.018600
+R-squared (adj): 0.013882
+
+Spearman rho: -0.166318, p: 0.016093
+Pearson R: -0.136383, p: 0.048947
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: bpa
+TOTAL ITEMS: 209
+t: -0.911432,p: 0.363123
+R-squared: 0.003978
+R-squared (adj): -0.000811
+
+Spearman rho: -0.055727, p: 0.422883
+Pearson R: -0.063071, p: 0.364282
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 0.484617,p: 0.628458
+R-squared: 0.001128
+R-squared (adj): -0.003674
+
+Spearman rho: 0.041395, p: 0.551768
+Pearson R: 0.033583, p: 0.629286
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: perceptual property
+TOTAL ITEMS: 135
+t: -2.316509,p: 0.022048
+R-squared: 0.038504
+R-squared (adj): 0.031329
+
+Spearman rho: -0.203468, p: 0.017937
+Pearson R: -0.196225, p: 0.022551
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: perceptual property
+TOTAL ITEMS: 135
+t: 0.374970,p: 0.708275
+R-squared: 0.001048
+R-squared (adj): -0.006407
+
+Spearman rho: 0.035006, p: 0.686890
+Pearson R: 0.032376, p: 0.709320
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: perceptual property
+TOTAL ITEMS: 135
+t: -0.319194,p: 0.750076
+R-squared: 0.000760
+R-squared (adj): -0.006697
+
+Spearman rho: -0.022178, p: 0.798472
+Pearson R: -0.027564, p: 0.750983
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: action
+TOTAL ITEMS: 13
+t: -0.238279,p: 0.815685
+R-squared: 0.004709
+R-squared (adj): -0.078232
+
+Spearman rho: -0.307692, p: 0.306447
+Pearson R: -0.068623, p: 0.823727
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: action
+TOTAL ITEMS: 13
+t: 0.364080,p: 0.722132
+R-squared: 0.010926
+R-squared (adj): -0.071497
+
+Spearman rho: 0.065934, p: 0.830542
+Pearson R: 0.104525, p: 0.733985
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: action
+TOTAL ITEMS: 13
+t: -0.187444,p: 0.854444
+R-squared: 0.002919
+R-squared (adj): -0.080171
+
+Spearman rho: -0.307692, p: 0.306447
+Pearson R: -0.054031, p: 0.860836
+
+-------------
+
+
+PREDICTOR MODEL: LSA
+RELATION: norel
+TOTAL ITEMS: 3226
+t: -6.688891,p: 0.000000
+R-squared: 0.013683
+R-squared (adj): 0.013378
+
+Spearman rho: -0.148464, p: 0.000000
+Pearson R: -0.116976, p: 0.000000
+
+
+PREDICTOR MODEL: w2v_small
+RELATION: norel
+TOTAL ITEMS: 3226
+t: 0.861921,p: 0.388795
+R-squared: 0.000230
+R-squared (adj): -0.000080
+
+Spearman rho: 0.009560, p: 0.587275
+Pearson R: 0.015176, p: 0.388869
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: norel
+TOTAL ITEMS: 3226
+t: -0.353096,p: 0.724040
+R-squared: 0.000039
+R-squared (adj): -0.000271
+
+Spearman rho: -0.013654, p: 0.438177
+Pearson R: -0.006218, p: 0.724081
+
+-------------
+

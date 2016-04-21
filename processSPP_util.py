@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import os, re, csv, scipy, sklearn, gensim, pandas, math
+import os, re, csv, scipy, sklearn, gensim, pandas, math, gzip
 from scipy import stats,spatial
 from sklearn import preprocessing
 import statsmodels.api as sm
@@ -100,11 +100,11 @@ def regrSPP(df,depcol,predlist,scale,out=None):
 #         print np.std(df[p])
     mod = sm.OLS(y,X)
     results = mod.fit()
-    print results.summary()
+#     print results.summary()
     
 #     get regression coefficient and lower and upper bounds of confidence interval
     coef = results.params[0]
-    print coef
+#     print coef
     cil = results.conf_int()[0][0]
 
 #     print results.summary()
@@ -312,21 +312,47 @@ def plotPoints(pts,xlabels,name,errs=None,inline=0):
         plt.savefig('plots/%s.png'%name)
     plt.clf()
     
-# if __name__ == "__main__":
-#     pts = []
-#     errs = []
-#     labels = ['1','2']
-#     d = pandas.DataFrame(data={'1':[1,2,3,4,5],'2':[1,3,2,4,5],'3':[5,2,2,3,4]})
-#     coef,cil,tv,pv,rs,ra = regrSPP(d,'1',['2'],1)
-# 
-#     pts.append(coef)
-#     errs.append(coef-cil)
-#     coef,cil,tv,pv,rs,ra = regrSPP(d,'1',['3'],1)
-#     pts.append(coef)
-#     errs.append(coef-cil)
-#     print pts
-#     print errs
-#     plotPoints(pts,labels,errs=errs)
-#     model = readVectors('/Users/allysonettinger/Desktop/glove/glove-Wik-Gig/glove.6B.100d.txt')
+def plotAxis(ax,pts,xlabels,name,errs=None,inline=0):
+    for i in range(len(pts)):
+        p = pts[i]
+        print p
+        ax.scatter(i,p,c='black',s=50)
+        if errs:
+            ax.errorbar(i,p,yerr=errs[i],c='black')
+    #figure out how to set individual labels
+    ax.set_xticks(range(len(pts)))
+    ax.set_xticklabels(xlabels,size='x-small')
+    ax.set_title(name)
+#     ax.tick_params(axis='x', which='both', bottom='off', top='off',labelsize='small')
+#     ax.tick_params(axis='y', which='both',labelsize='small')
+#     if inline:
+#         plt.title(name)
+#         plt.show()
+#     else:
+#         plt.savefig('plots/%s.png'%name)
+#     plt.clf()
+    
+def plotTogether():
+#     x = np.linspace(0, 2 * np.pi, 400)
+#     y = np.sin(x ** 2)
+    x = np.array([1,2,3])
+    y = np.array([1,4,8])
+    f, ((ax1, ax2), (ax3, ax4),(ax5,ax6)) = plt.subplots(3, 2, sharex='col', sharey=True)
+    axList =[ax1,ax2]
+    for i in range(len(axList)):
+        plotAxis(axList[i],[1,4,8],['w','e','r'],'test',errs=[7,4,5])
+#     ax1.plot(x, y)
+#     ax1.set_title('Sharing x per column, y per row')
+#     ax2.scatter(x, y)
+    ax3.scatter(x, 2 * y , color='r')
+    ax4.plot(x, 2 * y, color='r')
+    ax5.scatter(x, 2 * y , color='g')
+    ax6.plot(x, 2 * y, color='g')
+    plt.show()
+
+    
+if __name__ == "__main__":
+    plotTogether()
+
 #     rank = getNR('cat','elephant',model)
 #     print rank

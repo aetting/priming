@@ -12,51 +12,126 @@ import numpy as np
 # externalModelsNames = ['w2v_small','w2v_big']
 externalModelsNames = ['w2v_uk1','w2v_big','w2v_ukfull','gloveWG100','gloveTW100']
 
+simdir = '/Users/allysonettinger/Desktop/meaning_cc/priming/similarity-sets'
+simFileNames = [os.path.join(simdir,e) for e in os.listdir(simdir) if re.match('\w',e)]
+elpFile = '/Users/allysonettinger/Desktop/meaning_cc/priming/elp-full.csv'
+
     
-def runSeries(nrTF=0,inline=0,summaryFile=None):
+def runSeries(nrTF=0,inline=0,summaryFile=None,modsOnly=False):
     #get correlations for both task types, both latencies, and both raw RT correlation + priming correlation
     #print results in latex tables
-#     taskDirList = ['ldt','naming']
-#     rawList = [1,0]
-#     latencyList = ['200','1200']
-    taskDirList = ['ldt']
-    rawList = [1]
-    latencyList = ['200']
+    taskDirList = ['ldt','naming']
+    rawList = [1,0]
+    latencyList = ['200','1200']
+#     taskDirList = ['ldt']
+#     rawList = [1]
+#     latencyList = ['200']
     
     nrTF = bool(int(nrTF))
     
     for td in taskDirList:
         for r in rawList:
             for l in latencyList:
-                print '%s-%s-%d'%(td,l,r)
-                analyzeSPP(td,l,r,nr = nrTF,inline=inline,summaryFile=summaryFile)
+                print '\n\nCONDITION:\n\n%s-%s-%d'%(td,l,r)
+                analyzeSPP(td,l,r,nr = nrTF,inline=inline,summaryFile=summaryFile,modsOnly=modsOnly,plotDirectly=True)
+    print '\n\nSIMSETS\n\n'
+    analyzeSimSets(nr = nrTF,inline=inline,modsOnly=modsOnly,summaryFile=summaryFile)
 
-def runSeriesLaTeX(nrTF=0,inline=0,summaryFile=None):
+def runSeriesSubplots(nrTF=0,inline=0,summaryFile=None,modsOnly=False):
     #get correlations for both task types, both latencies, and both raw RT correlation + priming correlation
     #print results in latex tables
-#     taskDirList = ['ldt','naming']
-#     rawList = [1,0]
-#     latencyList = ['200','1200']
-    taskDirList = ['ldt']
-    rawList = [1]
-    latencyList = ['200']
+    taskDirList = ['ldt','naming']
+    rawList = [1,0]
+    rawName = ['raw','priming']
+    latencyList = ['200','1200']
+#     taskDirList = ['ldt']
+#     rawList = [1]
+#     latencyList = ['200']
     
     nrTF = bool(int(nrTF))
     
-    for td in taskDirList:
-        for r in rawList:
+    for j in range(len(rawList)):
+        r = rawList[j]
+        rawness = rawName[j] 
+        f, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharex='col', sharey=True)
+        i = 0
+        axList = [ax1,ax3,ax2,ax4]
+        labs = ['t','r','e']
+        for td in taskDirList:
             for l in latencyList:
-                print '%s-%s-%d'%(td,l,r)
-                with open('texdocs/%s-%s-%d-%d-reltables.tex'%(td,l,r,int(nrTF)),'w') as out:
-                    out.write(r'\documentclass{article}'+'\n')
-                    out.write(r'\usepackage{multirow}'+'\n')
-                    out.write(r'\usepackage[margin=.9in]{geometry}'+'\n')
-                    out.write(r'\begin{document}'+'\n')
-                    analyzeSPP(td,l,r,texTableDoc = out,nr = nrTF,inline=inline,summaryFile=summaryFile)
-                    out.write(r'\end{document}')
-                    
+                print '\n\nCONDITION:\n\n%s-%s-%s'%(td,l,rawness)
+                name = '%s-%s-%s'%(td,l,rawness)
+                (coefs,labs,errs) = analyzeSPP(td,l,r,nr = nrTF,inline=inline,summaryFile=summaryFile,modsOnly=modsOnly)
+                plotAxis(axList[i],coefs,labs,name,errs=errs)
+                i += 1
+        if modsOnly:
+            plt.savefig('plots/alltasks-%s-modsonly.png'%rawness)
+        else:
+            plt.savefig('plots/alltasks-%s.png'%rawness)
+        
 
-def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summaryFile = None):
+# def runSeriesLaTeX(nrTF=0,inline=0,summaryFile=None):
+#     #get correlations for both task types, both latencies, and both raw RT correlation + priming correlation
+#     #print results in latex tables
+# #     taskDirList = ['ldt','naming']
+# #     rawList = [1,0]
+# #     latencyList = ['200','1200']
+#     taskDirList = ['ldt']
+#     rawList = [1]
+#     latencyList = ['200']
+#     
+#     nrTF = bool(int(nrTF))
+#     
+#     for td in taskDirList:
+#         for r in rawList:
+#             for l in latencyList:
+#                 print '%s-%s-%d'%(td,l,r)
+#                 with open('texdocs/%s-%s-%d-%d-reltables.tex'%(td,l,r,int(nrTF)),'w') as out:
+#                     out.write(r'\documentclass{article}'+'\n')
+#                     out.write(r'\usepackage{multirow}'+'\n')
+#                     out.write(r'\usepackage[margin=.9in]{geometry}'+'\n')
+#                     out.write(r'\begin{document}'+'\n')
+#                     analyzeSPP(td,l,r,texTableDoc = out,nr = nrTF,inline=inline,summaryFile=summaryFile)
+#                     out.write(r'\end{document}')
+
+def analyzeSimSets(nr=0,inline=0,modsOnly=False,summaryFile=None):
+    if summaryFile: x = 1
+    else: out = None
+    lexDF = pandas.read_csv(elpFile)
+    freqDict = {}
+    for i in range(len(lexDF.iloc[:,1])):
+        word = lexDF.ix[i,'Word'].lower()
+        freq = lexDF.ix[i,'LgSUBTLWF']
+        freqDict[word] = {}
+        freqDict[word]['LgSUBTLWF'] = freq
+    for simFileName in simFileNames:
+        setName = re.match('.+/([^/]+)$',simFileName).group(1)
+#         print '\n\n' + setName + '\n'
+        if nr: 
+            valsPrefix = 'nrDF'
+        else: 
+            valsPrefix = 'simDF'
+        df = pandas.read_csv('%s-%s.csv'%(valsPrefix,setName),index_col=0)
+        df = addLexVars(df,freqDict,['LgSUBTLWF'],'_1','w1')
+        df = addLexVars(df,freqDict,['LgSUBTLWF'],'_2','w2')
+
+#         elp['Length'][elp['Word'] == 'aggressiveness']
+        if modsOnly: lexVars = []
+        else: lexVars = ['LgSUBTLWF_1','LgSUBTLWF_2']
+        relevantRegrVars = ['SimRating'] + externalModelsNames + lexVars
+        constraint = constrainDF('df',relevantRegrVars)
+        testDF = df[eval(constraint)].reset_index()
+#         print testDF
+        coefs = []
+        errs = []
+        for modelName in externalModelsNames:
+            #regression
+            coef,cil,tv,pv,rs,ra = regrSPP(testDF,'SimRating',[modelName] + lexVars,1,out=out) 
+            coefs.append(coef)
+            errs.append(coef-cil)
+        plotPoints(coefs,[m[0:7] for m in externalModelsNames],'%s_coefs'%setName,errs=errs,inline=inline)                  
+
+def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summaryFile = None,modsOnly=False,rels=False,plotDirectly=False):
 
     if task_dir== 'ldt': t = 'LDT'
     elif task_dir== 'naming': t = 'NT'
@@ -79,12 +154,10 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
     else:
         modelList = ['LSA_diff'] + modColsToAdd
         dep = pairDep
-        
-    tgtLexVars = []
-    primeLexVars = [] 
-    lexVars =  tgtLexVars + primeLexVars  
     
-    relevantRegrVars = [dep] + modelList + lexVars
+    tgtLexVars = ['LogSubFreq']
+#     tgtLexVars = []
+    primeLexVars = ['LogSubFreq']    
         
     if summaryFile:
         outFileName = '-'.join([dep,dist,'rels'])
@@ -108,7 +181,8 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
     tempDF = addLexVars(tempDF,lexDict,tgtLexVars,'_T','TargetWord')
     tempDF = addLexVars(tempDF,lexDict,primeLexVars,'_P','Prime') 
     if not raw: 
-        addLexVars(tempDF,lexDict,primeLexVars,'_U','Unrelated')
+        #this line didn't have an output variable defined -- most likely just a mistake, but check to make sure this is how it should really be
+        tempDF = addLexVars(tempDF,lexDict,primeLexVars,'_U','Unrelated')
         tempDF.insert(len(tempDF.columns.values),'LSA_diff',tempDF['LSA']-tempDF['LSA_U'])
     
     #insert VSM values into DF for all external models
@@ -128,6 +202,16 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
                 rel = modValsDF[col+'_rel']
                 tempDF.insert(len(tempDF.columns.values),col,rel-unrel)
 #     print tempDF
+  
+    #this chunk has not been tested!!!!
+    if modsOnly: lexVars = []
+    else:
+        if raw:
+            lexVars =  [t+'_T' for t in tgtLexVars] + [p+'_P' for p in primeLexVars]
+        else:
+            lexVars =  [t+'_T' for t in tgtLexVars] + [p+'_P' for p in primeLexVars] +  [u+'_U' for u in primeLexVars]
+    
+    relevantRegrVars = [dep] + modelList + lexVars
     
     colNamesTex = []
     rowNamesTex = []
@@ -146,13 +230,13 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
     testDF = tempDF[eval(constraint)].reset_index()
     tot = len(testDF.iloc[:,0])
     for modelName in modelList:
-        print '\n\nFull'
-        print modelName
+#         print '\n\nFull'
+#         print modelName
         if summaryFile:
             out.write('\nPREDICTOR MODEL: ' + modelName + '\n')
             out.write('\nALL ITEMS: %d\n'%tot)
         #regression
-        coef,cil,tv,pv,rs,ra = regrSPP(testDF,dep,[modelName],1,out=out)
+        coef,cil,tv,pv,rs,ra = regrSPP(testDF,dep,[modelName] + lexVars,1,out=out)
         
         #store regression coefficient and distance from coef to confidence interval lower bound 
         fullCoefs.append(coef)
@@ -171,14 +255,18 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
     if texTableDoc:
         laTeXTable(texTableDoc,['FullSPP'],colNamesTex,[row])
     
+    labs = [m[0:7] for m in modelList]
     #plot full SPP coefficients
-    plotPoints(fullCoefs,[m[0:7] for m in modelList],'fullSPP_coefs',errs=fullCoefErrs,inline=inline)
+    if plotDirectly:
+        plotPoints(fullCoefs,labs,'fullSPP_coefs',errs=fullCoefErrs,inline=inline)
     
     valsTex.append(row)
     if summaryFile:
         out.write('-------------\n\n')
     
-    
+    if not rels:
+        return fullCoefs,labs,fullCoefErrs
+        
     #loop through relation types and get correlations within each relation, for each model
     #need to decide whether to compare models within a relation or relations within a model ... 
     #probably good to try both for now. see what is interesting
@@ -200,15 +288,15 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
 #         except: print "\nWARNNG: COULDN'T SCALE\n"
         rel2Mod[rel] = {}
         for modelName in modelList:
-            print '\n\n'+ rel
-            print modelName
+#             print '\n\n'+ rel
+#             print modelName
             if not modelName in mod2Rel: mod2Rel[modelName] = {}
             if summaryFile:
                 out.write('\nPREDICTOR MODEL: ' + modelName + '\n')
                 out.write('RELATION: ' + str(rel) + '\n')
                 out.write('TOTAL ITEMS: ' + str(tot) + '\n')
             #regression
-            coef,cil,tv,pv,rs,ra = regrSPP(testDF,dep,[modelName],1,out=out)
+            coef,cil,tv,pv,rs,ra = regrSPP(testDF,dep,[modelName] + lexVars,1,out=out)
             
             #store regression coefficient and distance from coef to confidence interval lower bound in re2Mod and mod2Rel dicts so we can plot in both directions later
             rel2Mod[rel][modelName] = (coef,coef-cil)
@@ -247,15 +335,15 @@ def analyzeSPP(task_dir,latency,raw,texTableDoc = None,nr = False,inline=0,summa
             relCoefErrs.append(rel2Mod[rel][mod][1])
         plotPoints(relCoefs,[m[0:7] for m in mList],'%s_coefs'%rel,errs=relCoefErrs,inline=inline)
     #iterate through models and plot across relations for that model
-    for mod in mod2Rel:
-        modCoefs = []
-        modCoefErrs = []
-        rList = []
-        for rel in mod2Rel[mod]:
-            rList.append(rel)
-            modCoefs.append(mod2Rel[mod][rel][0])
-            modCoefErrs.append(mod2Rel[mod][rel][1])
-        plotPoints(modCoefs,[r[0:3] for r in rList],'%s_coefs'%mod,errs=modCoefErrs,inline=inline)
+#     for mod in mod2Rel:
+#         modCoefs = []
+#         modCoefErrs = []
+#         rList = []
+#         for rel in mod2Rel[mod]:
+#             rList.append(rel)
+#             modCoefs.append(mod2Rel[mod][rel][0])
+#             modCoefErrs.append(mod2Rel[mod][rel][1])
+#         plotPoints(modCoefs,[r[0:3] for r in rList],'%s_coefs'%mod,errs=modCoefErrs,inline=inline)
     if summaryFile:
         out.close()
 
@@ -392,7 +480,8 @@ def readSPP(task_dir,t):
     return targetLexDF,primeLexDF,relDF,pairedDF,lexDict,relDict
                
 if __name__ == "__main__":
-    runSeries()
+    runSeriesSubplots(modsOnly=False)
+ #    analyzeSimSets(modsOnly=False)
 #     synSetEval(synFileNames,externalModels,externalModelsNames)
 #     with open('table.tex','w') as out:
 #         laTeXTable(out,[1,2],[1,2,3,4],mat)

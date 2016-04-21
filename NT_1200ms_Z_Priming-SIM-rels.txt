@@ -1,0 +1,884 @@
+
+PREDICTOR MODEL: LSA_diff
+
+ALL ITEMS: 3234
+t: 10.421146,p: 0.000000
+R-squared: 0.032499
+R-squared (adj): 0.032200
+
+Spearman rho: 0.047250, p: 0.007200
+Pearson R: 0.048704, p: 0.005600
+
+
+PREDICTOR MODEL: w2v_uk1
+
+ALL ITEMS: 3234
+t: 12.014398,p: 0.000000
+R-squared: 0.042739
+R-squared (adj): 0.042443
+
+Spearman rho: 0.075543, p: 0.000017
+Pearson R: 0.076596, p: 0.000013
+
+
+PREDICTOR MODEL: w2v_big
+
+ALL ITEMS: 3234
+t: 12.160214,p: 0.000000
+R-squared: 0.043737
+R-squared (adj): 0.043442
+
+Spearman rho: 0.075448, p: 0.000017
+Pearson R: 0.078842, p: 0.000007
+
+
+PREDICTOR MODEL: w2v_ukfull
+
+ALL ITEMS: 3234
+t: 12.088313,p: 0.000000
+R-squared: 0.043244
+R-squared (adj): 0.042948
+
+Spearman rho: 0.076593, p: 0.000013
+Pearson R: 0.077340, p: 0.000011
+
+
+PREDICTOR MODEL: gloveWG100
+
+ALL ITEMS: 3234
+t: 11.540864,p: 0.000000
+R-squared: 0.039567
+R-squared (adj): 0.039270
+
+Spearman rho: 0.063379, p: 0.000310
+Pearson R: 0.064360, p: 0.000250
+
+
+PREDICTOR MODEL: gloveTW100
+
+ALL ITEMS: 3234
+t: 11.492894,p: 0.000000
+R-squared: 0.039252
+R-squared (adj): 0.038955
+
+Spearman rho: 0.060224, p: 0.000611
+Pearson R: 0.071019, p: 0.000053
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: synonym
+TOTAL ITEMS: 701
+t: 0.903143,p: 0.366760
+R-squared: 0.001164
+R-squared (adj): -0.000263
+
+Spearman rho: -0.000947, p: 0.980042
+Pearson R: 0.034116, p: 0.367103
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: synonym
+TOTAL ITEMS: 701
+t: 1.340733,p: 0.180442
+R-squared: 0.002561
+R-squared (adj): 0.001136
+
+Spearman rho: 0.050302, p: 0.183423
+Pearson R: 0.050610, p: 0.180754
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: synonym
+TOTAL ITEMS: 701
+t: 1.913324,p: 0.056114
+R-squared: 0.005203
+R-squared (adj): 0.003781
+
+Spearman rho: 0.077189, p: 0.041043
+Pearson R: 0.072129, p: 0.056290
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: synonym
+TOTAL ITEMS: 701
+t: 1.528235,p: 0.126906
+R-squared: 0.003325
+R-squared (adj): 0.001902
+
+Spearman rho: 0.053136, p: 0.159919
+Pearson R: 0.057666, p: 0.127178
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: synonym
+TOTAL ITEMS: 701
+t: -0.066473,p: 0.947020
+R-squared: 0.000006
+R-squared (adj): -0.001422
+
+Spearman rho: -0.008177, p: 0.828896
+Pearson R: -0.002512, p: 0.947058
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: synonym
+TOTAL ITEMS: 701
+t: 1.978169,p: 0.048301
+R-squared: 0.005559
+R-squared (adj): 0.004139
+
+Spearman rho: 0.055620, p: 0.141255
+Pearson R: 0.074560, p: 0.048462
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: antonym
+TOTAL ITEMS: 238
+t: 1.455765,p: 0.146781
+R-squared: 0.008863
+R-squared (adj): 0.004681
+
+Spearman rho: 0.095049, p: 0.143759
+Pearson R: 0.094142, p: 0.147638
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: antonym
+TOTAL ITEMS: 238
+t: 1.229841,p: 0.219976
+R-squared: 0.006341
+R-squared (adj): 0.002149
+
+Spearman rho: 0.132121, p: 0.041703
+Pearson R: 0.079633, p: 0.220954
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: antonym
+TOTAL ITEMS: 238
+t: 1.052366,p: 0.293703
+R-squared: 0.004651
+R-squared (adj): 0.000451
+
+Spearman rho: 0.119120, p: 0.066572
+Pearson R: 0.068199, p: 0.294726
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: antonym
+TOTAL ITEMS: 238
+t: 1.175699,p: 0.240895
+R-squared: 0.005799
+R-squared (adj): 0.001604
+
+Spearman rho: 0.135587, p: 0.036583
+Pearson R: 0.076148, p: 0.241892
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: antonym
+TOTAL ITEMS: 238
+t: 2.273883,p: 0.023868
+R-squared: 0.021351
+R-squared (adj): 0.017222
+
+Spearman rho: 0.190878, p: 0.003112
+Pearson R: 0.146119, p: 0.024167
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: antonym
+TOTAL ITEMS: 238
+t: 2.532710,p: 0.011965
+R-squared: 0.026353
+R-squared (adj): 0.022244
+
+Spearman rho: 0.176936, p: 0.006202
+Pearson R: 0.162335, p: 0.012147
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: fpa
+TOTAL ITEMS: 378
+t: 0.453399,p: 0.650522
+R-squared: 0.000545
+R-squared (adj): -0.002106
+
+Spearman rho: 0.052270, p: 0.310784
+Pearson R: 0.023345, p: 0.650956
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: fpa
+TOTAL ITEMS: 378
+t: 0.663203,p: 0.507606
+R-squared: 0.001165
+R-squared (adj): -0.001484
+
+Spearman rho: 0.027443, p: 0.594803
+Pearson R: 0.034137, p: 0.508170
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: fpa
+TOTAL ITEMS: 378
+t: 1.006329,p: 0.314903
+R-squared: 0.002679
+R-squared (adj): 0.000034
+
+Spearman rho: 0.050326, p: 0.329147
+Pearson R: 0.051759, p: 0.315546
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: fpa
+TOTAL ITEMS: 378
+t: 0.845119,p: 0.398581
+R-squared: 0.001891
+R-squared (adj): -0.000757
+
+Spearman rho: 0.037595, p: 0.466143
+Pearson R: 0.043485, p: 0.399208
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: fpa
+TOTAL ITEMS: 378
+t: 0.363799,p: 0.716212
+R-squared: 0.000351
+R-squared (adj): -0.002301
+
+Spearman rho: 0.028274, p: 0.583692
+Pearson R: 0.018733, p: 0.716573
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: fpa
+TOTAL ITEMS: 378
+t: -0.940078,p: 0.347780
+R-squared: 0.002339
+R-squared (adj): -0.000308
+
+Spearman rho: -0.056186, p: 0.275881
+Pearson R: -0.048360, p: 0.348421
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: script
+TOTAL ITEMS: 181
+t: 1.160302,p: 0.247463
+R-squared: 0.007424
+R-squared (adj): 0.001910
+
+Spearman rho: 0.112184, p: 0.132691
+Pearson R: 0.086162, p: 0.248784
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: script
+TOTAL ITEMS: 181
+t: 2.540154,p: 0.011926
+R-squared: 0.034606
+R-squared (adj): 0.029243
+
+Spearman rho: 0.168723, p: 0.023177
+Pearson R: 0.186027, p: 0.012165
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: script
+TOTAL ITEMS: 181
+t: 1.899612,p: 0.059083
+R-squared: 0.019653
+R-squared (adj): 0.014207
+
+Spearman rho: 0.114015, p: 0.126446
+Pearson R: 0.140190, p: 0.059794
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: script
+TOTAL ITEMS: 181
+t: 2.493618,p: 0.013547
+R-squared: 0.033392
+R-squared (adj): 0.028022
+
+Spearman rho: 0.163615, p: 0.027749
+Pearson R: 0.182734, p: 0.013810
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: script
+TOTAL ITEMS: 181
+t: 1.639450,p: 0.102866
+R-squared: 0.014713
+R-squared (adj): 0.009239
+
+Spearman rho: 0.138407, p: 0.063151
+Pearson R: 0.121295, p: 0.103830
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: script
+TOTAL ITEMS: 181
+t: 0.781173,p: 0.435727
+R-squared: 0.003379
+R-squared (adj): -0.002158
+
+Spearman rho: 0.074582, p: 0.318361
+Pearson R: 0.058127, p: 0.437008
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: unclassified
+TOTAL ITEMS: 678
+t: -2.248854,p: 0.024842
+R-squared: 0.007415
+R-squared (adj): 0.005949
+
+Spearman rho: -0.069446, p: 0.070746
+Pearson R: -0.086109, p: 0.024949
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: unclassified
+TOTAL ITEMS: 678
+t: -0.164988,p: 0.869003
+R-squared: 0.000040
+R-squared (adj): -0.001437
+
+Spearman rho: 0.007711, p: 0.841161
+Pearson R: -0.006341, p: 0.869099
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: unclassified
+TOTAL ITEMS: 678
+t: -0.421881,p: 0.673246
+R-squared: 0.000263
+R-squared (adj): -0.001214
+
+Spearman rho: -0.004462, p: 0.907673
+Pearson R: -0.016212, p: 0.673473
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: unclassified
+TOTAL ITEMS: 678
+t: -0.180728,p: 0.856636
+R-squared: 0.000048
+R-squared (adj): -0.001429
+
+Spearman rho: 0.006336, p: 0.869193
+Pearson R: -0.006946, p: 0.856740
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: unclassified
+TOTAL ITEMS: 678
+t: 1.133820,p: 0.257271
+R-squared: 0.001895
+R-squared (adj): 0.000421
+
+Spearman rho: 0.048074, p: 0.211229
+Pearson R: 0.043535, p: 0.257623
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: unclassified
+TOTAL ITEMS: 678
+t: 0.859423,p: 0.390411
+R-squared: 0.001090
+R-squared (adj): -0.000386
+
+Spearman rho: 0.031634, p: 0.410864
+Pearson R: 0.033012, p: 0.390762
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: category
+TOTAL ITEMS: 307
+t: 2.309224,p: 0.021597
+R-squared: 0.017128
+R-squared (adj): 0.013916
+
+Spearman rho: 0.161956, p: 0.004442
+Pearson R: 0.130874, p: 0.021812
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: category
+TOTAL ITEMS: 307
+t: 1.342308,p: 0.180491
+R-squared: 0.005854
+R-squared (adj): 0.002605
+
+Spearman rho: 0.048152, p: 0.400499
+Pearson R: 0.076510, p: 0.181206
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: category
+TOTAL ITEMS: 307
+t: 1.073206,p: 0.284024
+R-squared: 0.003750
+R-squared (adj): 0.000494
+
+Spearman rho: 0.033241, p: 0.561770
+Pearson R: 0.061236, p: 0.284814
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: category
+TOTAL ITEMS: 307
+t: 1.191382,p: 0.234427
+R-squared: 0.004617
+R-squared (adj): 0.001364
+
+Spearman rho: 0.038961, p: 0.496425
+Pearson R: 0.067949, p: 0.235194
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: category
+TOTAL ITEMS: 307
+t: 1.662430,p: 0.097450
+R-squared: 0.008951
+R-squared (adj): 0.005712
+
+Spearman rho: 0.077316, p: 0.176638
+Pearson R: 0.094609, p: 0.098000
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: category
+TOTAL ITEMS: 307
+t: 1.314564,p: 0.189641
+R-squared: 0.005616
+R-squared (adj): 0.002366
+
+Spearman rho: 0.055689, p: 0.330790
+Pearson R: 0.074937, p: 0.190367
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: 1.055873,p: 0.292346
+R-squared: 0.005743
+R-squared (adj): 0.000592
+
+Spearman rho: 0.087223, p: 0.226537
+Pearson R: 0.075785, p: 0.293603
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: 1.323167,p: 0.187345
+R-squared: 0.008990
+R-squared (adj): 0.003855
+
+Spearman rho: 0.110873, p: 0.123793
+Pearson R: 0.094815, p: 0.188495
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: 1.993153,p: 0.047653
+R-squared: 0.020169
+R-squared (adj): 0.015092
+
+Spearman rho: 0.130934, p: 0.068796
+Pearson R: 0.142016, p: 0.048235
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: 1.343202,p: 0.180784
+R-squared: 0.009262
+R-squared (adj): 0.004128
+
+Spearman rho: 0.108295, p: 0.132824
+Pearson R: 0.096237, p: 0.181921
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: 1.493264,p: 0.137001
+R-squared: 0.011422
+R-squared (adj): 0.006299
+
+Spearman rho: 0.115511, p: 0.108746
+Pearson R: 0.106872, p: 0.138025
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: supraordinate
+TOTAL ITEMS: 194
+t: 0.453052,p: 0.651021
+R-squared: 0.001062
+R-squared (adj): -0.004113
+
+Spearman rho: 0.018397, p: 0.799024
+Pearson R: 0.032594, p: 0.651868
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: instrument
+TOTAL ITEMS: 43
+t: -1.228953,p: 0.225931
+R-squared: 0.034712
+R-squared (adj): 0.011729
+
+Spearman rho: -0.198716, p: 0.201443
+Pearson R: -0.186311, p: 0.231606
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: instrument
+TOTAL ITEMS: 43
+t: -0.070545,p: 0.944095
+R-squared: 0.000118
+R-squared (adj): -0.023688
+
+Spearman rho: -0.044548, p: 0.776674
+Pearson R: -0.010885, p: 0.944771
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: instrument
+TOTAL ITEMS: 43
+t: 0.027732,p: 0.978007
+R-squared: 0.000018
+R-squared (adj): -0.023791
+
+Spearman rho: -0.054213, p: 0.729885
+Pearson R: 0.004279, p: 0.978274
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: instrument
+TOTAL ITEMS: 43
+t: -0.080242,p: 0.936426
+R-squared: 0.000153
+R-squared (adj): -0.023653
+
+Spearman rho: -0.080942, p: 0.605867
+Pearson R: -0.012381, p: 0.937195
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: instrument
+TOTAL ITEMS: 43
+t: 0.975965,p: 0.334670
+R-squared: 0.022176
+R-squared (adj): -0.001106
+
+Spearman rho: 0.129115, p: 0.409271
+Pearson R: 0.148915, p: 0.340561
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: instrument
+TOTAL ITEMS: 43
+t: -1.206513,p: 0.234372
+R-squared: 0.033498
+R-squared (adj): 0.010486
+
+Spearman rho: -0.147387, p: 0.345594
+Pearson R: -0.183024, p: 0.240091
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: functional property
+TOTAL ITEMS: 101
+t: 1.150105,p: 0.252844
+R-squared: 0.013055
+R-squared (adj): 0.003185
+
+Spearman rho: 0.087997, p: 0.381549
+Pearson R: 0.114257, p: 0.255242
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: functional property
+TOTAL ITEMS: 101
+t: 1.732360,p: 0.086293
+R-squared: 0.029136
+R-squared (adj): 0.019428
+
+Spearman rho: 0.200012, p: 0.044922
+Pearson R: 0.170694, p: 0.087888
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: functional property
+TOTAL ITEMS: 101
+t: 1.480031,p: 0.142009
+R-squared: 0.021435
+R-squared (adj): 0.011650
+
+Spearman rho: 0.159942, p: 0.110112
+Pearson R: 0.146408, p: 0.144028
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: functional property
+TOTAL ITEMS: 101
+t: 1.432263,p: 0.155187
+R-squared: 0.020101
+R-squared (adj): 0.010302
+
+Spearman rho: 0.178987, p: 0.073310
+Pearson R: 0.141780, p: 0.157278
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: functional property
+TOTAL ITEMS: 101
+t: -0.377653,p: 0.706488
+R-squared: 0.001424
+R-squared (adj): -0.008562
+
+Spearman rho: -0.077228, p: 0.442716
+Pearson R: -0.037738, p: 0.707899
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: functional property
+TOTAL ITEMS: 101
+t: 0.294428,p: 0.769041
+R-squared: 0.000866
+R-squared (adj): -0.009125
+
+Spearman rho: -0.015282, p: 0.879436
+Pearson R: 0.029430, p: 0.770172
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 0.184269,p: 0.853982
+R-squared: 0.000163
+R-squared (adj): -0.004644
+
+Spearman rho: -0.018807, p: 0.786938
+Pearson R: 0.012776, p: 0.854330
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 0.676012,p: 0.499784
+R-squared: 0.002192
+R-squared (adj): -0.002605
+
+Spearman rho: 0.065592, p: 0.345381
+Pearson R: 0.046822, p: 0.500819
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 0.225805,p: 0.821575
+R-squared: 0.000245
+R-squared (adj): -0.004561
+
+Spearman rho: 0.033121, p: 0.634017
+Pearson R: 0.015655, p: 0.821998
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 0.881104,p: 0.379278
+R-squared: 0.003719
+R-squared (adj): -0.001071
+
+Spearman rho: 0.062279, p: 0.370349
+Pearson R: 0.060980, p: 0.380429
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 0.570612,p: 0.568879
+R-squared: 0.001563
+R-squared (adj): -0.003237
+
+Spearman rho: 0.032746, p: 0.637860
+Pearson R: 0.039534, p: 0.569811
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: bpa
+TOTAL ITEMS: 209
+t: 1.796303,p: 0.073897
+R-squared: 0.015276
+R-squared (adj): 0.010542
+
+Spearman rho: 0.109329, p: 0.115073
+Pearson R: 0.123596, p: 0.074597
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: perceptual property
+TOTAL ITEMS: 139
+t: 1.356514,p: 0.177151
+R-squared: 0.013159
+R-squared (adj): 0.006008
+
+Spearman rho: 0.096850, p: 0.256710
+Pearson R: 0.114712, p: 0.178734
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: perceptual property
+TOTAL ITEMS: 139
+t: 2.546064,p: 0.011993
+R-squared: 0.044867
+R-squared (adj): 0.037945
+
+Spearman rho: 0.163090, p: 0.055072
+Pearson R: 0.211817, p: 0.012307
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: perceptual property
+TOTAL ITEMS: 139
+t: 2.519106,p: 0.012906
+R-squared: 0.043963
+R-squared (adj): 0.037035
+
+Spearman rho: 0.168578, p: 0.047281
+Pearson R: 0.209674, p: 0.013238
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: perceptual property
+TOTAL ITEMS: 139
+t: 2.350633,p: 0.020158
+R-squared: 0.038498
+R-squared (adj): 0.031531
+
+Spearman rho: 0.130712, p: 0.125093
+Pearson R: 0.196210, p: 0.020616
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: perceptual property
+TOTAL ITEMS: 139
+t: 1.623709,p: 0.106720
+R-squared: 0.018746
+R-squared (adj): 0.011636
+
+Spearman rho: 0.071554, p: 0.402558
+Pearson R: 0.136918, p: 0.108002
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: perceptual property
+TOTAL ITEMS: 139
+t: 2.758384,p: 0.006597
+R-squared: 0.052254
+R-squared (adj): 0.045387
+
+Spearman rho: 0.230408, p: 0.006357
+Pearson R: 0.228592, p: 0.006796
+
+-------------
+
+
+PREDICTOR MODEL: LSA_diff
+RELATION: action
+TOTAL ITEMS: 13
+t: -0.366074,p: 0.720682
+R-squared: 0.011044
+R-squared (adj): -0.071369
+
+Spearman rho: 0.044017, p: 0.886464
+Pearson R: -0.105091, p: 0.732591
+
+
+PREDICTOR MODEL: w2v_uk1
+RELATION: action
+TOTAL ITEMS: 13
+t: 1.466757,p: 0.168154
+R-squared: 0.152026
+R-squared (adj): 0.081362
+
+Spearman rho: 0.505495, p: 0.078033
+Pearson R: 0.389905, p: 0.187826
+
+
+PREDICTOR MODEL: w2v_big
+RELATION: action
+TOTAL ITEMS: 13
+t: 0.996575,p: 0.338643
+R-squared: 0.076437
+R-squared (adj): -0.000526
+
+Spearman rho: 0.368132, p: 0.215857
+Pearson R: 0.276473, p: 0.360507
+
+
+PREDICTOR MODEL: w2v_ukfull
+RELATION: action
+TOTAL ITEMS: 13
+t: 0.826522,p: 0.424637
+R-squared: 0.053862
+R-squared (adj): -0.024983
+
+Spearman rho: 0.313187, p: 0.297438
+Pearson R: 0.232082, p: 0.445477
+
+
+PREDICTOR MODEL: gloveWG100
+RELATION: action
+TOTAL ITEMS: 13
+t: -0.171511,p: 0.866680
+R-squared: 0.002445
+R-squared (adj): -0.080684
+
+Spearman rho: 0.258242, p: 0.394284
+Pearson R: -0.049450, p: 0.872545
+
+
+PREDICTOR MODEL: gloveTW100
+RELATION: action
+TOTAL ITEMS: 13
+t: -1.428304,p: 0.178711
+R-squared: 0.145302
+R-squared (adj): 0.074077
+
+Spearman rho: -0.302198, p: 0.315608
+Pearson R: -0.381185, p: 0.198760
+
+-------------
+

@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Points/topics we could potentially want to cover in the paper}{1}
+\contentsline {subsection}{\numberline {1.1}High-level motivation}{1}
+\contentsline {subsection}{\numberline {1.2}Motivations for these particular results}{2}
+\contentsline {subsection}{\numberline {1.3}Observations from current results}{2}
+\contentsline {section}{\numberline {2}Additional tasks I'm already planning on}{4}
+\contentsline {section}{\numberline {3}Results: Correlation with priming magnitude}{4}
+\contentsline {subsection}{\numberline {3.1}LDT-200}{4}
+\contentsline {subsection}{\numberline {3.2}LDT-1200}{4}
+\contentsline {subsection}{\numberline {3.3}naming-200}{5}
+\contentsline {subsection}{\numberline {3.4}naming-1200}{5}
+\contentsline {section}{\numberline {4}Results: Correlation with raw RT}{5}
+\contentsline {subsection}{\numberline {4.1}LDT-200 }{5}
+\contentsline {subsection}{\numberline {4.2}LDT-1200}{5}
+\contentsline {subsection}{\numberline {4.3}naming-200}{5}
+\contentsline {subsection}{\numberline {4.4}naming-1200}{6}
+\contentsline {section}{\numberline {5}Results: Relation-specific correlations (LDT-200-RawRT)}{6}
+\contentsline {section}{\numberline {6}Results: Performance on similarity and synonymy datasets}{8}
+\contentsline {section}{\numberline {7}Previous Work (more detail)}{8}

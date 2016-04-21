@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage{multirow}
+\usepackage[margin=.9in]{geometry}
+\begin{document}
+\begin{tabular}{cccccc|}\cline{2-6}
+&\multicolumn{1}{|c}{w2vuk1} & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{5}{*}{MC-30.txt}} & rho: 0.605 & rho: 0.532 & rho: 0.612 & rho: 0.629 & rho: 0.607 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.002 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.626 & r: 0.584 & r: 0.68 & r: 0.627 & r: 0.62 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.001 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & n: 30 & n: 30 & n: 30 & n: 30 & n: 30 \\
+\hline
+\multicolumn{1}{|c|}{\multirow{5}{*}{MEN-dataset-natural-form-full}} & rho: 0.676 & rho: 0.691 & rho: 0.689 & rho: 0.697 & rho: 0.573 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.669 & r: 0.676 & r: 0.68 & r: 0.693 & r: 0.573 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & n: 3000 & n: 3000 & n: 3000 & n: 3000 & n: 3000 \\
+\hline
+\multicolumn{1}{|c|}{\multirow{5}{*}{RG-65.txt}} & rho: 0.605 & rho: 0.622 & rho: 0.64 & rho: 0.682 & rho: 0.683 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.598 & r: 0.627 & r: 0.643 & r: 0.691 & r: 0.675 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & n: 65 & n: 65 & n: 65 & n: 65 & n: 65 \\
+\hline
+\multicolumn{1}{|c|}{\multirow{5}{*}{SimLex-999-formatted.txt}} & rho: 0.295 & rho: 0.31 & rho: 0.313 & rho: 0.324 & rho: 0.131 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.284 & r: 0.296 & r: 0.303 & r: 0.296 & r: 0.12 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & n: 998 & n: 998 & n: 998 & n: 998 & n: 998 \\
+\hline
+\multicolumn{1}{|c|}{\multirow{5}{*}{ws353.combined.tab.formatted}} & rho: 0.617 & rho: 0.614 & rho: 0.619 & rho: 0.546 & rho: 0.526 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.635 & r: 0.628 & r: 0.636 & r: 0.528 & r: 0.521 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & n: 334 & n: 334 & n: 334 & n: 334 & n: 334 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{cccccc|}\cline{2-6}
+&\multicolumn{1}{|c}{w2vuk1} & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{ESL-50-single-word}} & 52.08 & 50.0 & 58.33 & 50.0 & 31.25 \\
+\multicolumn{1}{|c|}{} & 48 & 48 & 48 & 48 & 48 \\
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{RD-300-single-word}} & 57.14 & 58.73 & 60.32 & 65.08 & 49.21 \\
+\multicolumn{1}{|c|}{} & 63 & 63 & 63 & 63 & 63 \\
+\hline
+\multicolumn{1}{|c|}{\multirow{2}{*}{TOEFL-80-single-word}} & 66.67 & 66.67 & 66.67 & 79.71 & 52.17 \\
+\multicolumn{1}{|c|}{} & 69 & 69 & 69 & 69 & 69 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{FullSPP}} & rho: 0.084 & rho: 0.025 & rho: 0.032 & rho: 0.031 & rho: 0.151 & rho: 0.151 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.147 & p: 0.067 & p: 0.078 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.091 & r: 0.031 & r: 0.032 & r: 0.033 & r: 0.149 & r: 0.157 \\
+\multicolumn{1}{|c|}{} & p: 0.0 & p: 0.08 & p: 0.071 & p: 0.058 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & t: 11.64 & t: 9.816 & t: 9.943 & t: 9.973 & t: 14.172 & t: 14.448 \\
+\multicolumn{1}{|c|}{} & n: 3234 & n: 3234 & n: 3234 & n: 3234 & n: 3234 & n: 3234 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{synonym}} & rho: 0.076 & rho: 0.042 & rho: 0.038 & rho: 0.037 & rho: 0.144 & rho: 0.182 \\
+\multicolumn{1}{|c|}{} & p: 0.043 & p: 0.264 & p: 0.316 & p: 0.324 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.093 & r: 0.055 & r: 0.038 & r: 0.047 & r: 0.145 & r: 0.186 \\
+\multicolumn{1}{|c|}{} & p: 0.013 & p: 0.147 & p: 0.318 & p: 0.216 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & t: 2.479 & t: 1.453 & t: 1.001 & t: 1.239 & t: 3.879 & t: 5.021 \\
+\multicolumn{1}{|c|}{} & n: 701 & n: 701 & n: 701 & n: 701 & n: 701 & n: 701 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{antonym}} & rho: 0.053 & rho: 0.039 & rho: 0.057 & rho: 0.06 & rho: 0.153 & rho: 0.126 \\
+\multicolumn{1}{|c|}{} & p: 0.416 & p: 0.547 & p: 0.378 & p: 0.361 & p: 0.018 & p: 0.052 \\
+\multicolumn{1}{|c|}{} & r: 0.069 & r: 0.061 & r: 0.082 & r: 0.07 & r: 0.157 & r: 0.15 \\
+\multicolumn{1}{|c|}{} & p: 0.288 & p: 0.346 & p: 0.208 & p: 0.282 & p: 0.015 & p: 0.021 \\
+\multicolumn{1}{|c|}{} & t: 1.067 & t: 0.945 & t: 1.265 & t: 1.081 & t: 2.452 & t: 2.329 \\
+\multicolumn{1}{|c|}{} & n: 238 & n: 238 & n: 238 & n: 238 & n: 238 & n: 238 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{fpa}} & rho: -0.019 & rho: -0.068 & rho: -0.054 & rho: -0.037 & rho: 0.12 & rho: 0.091 \\
+\multicolumn{1}{|c|}{} & p: 0.707 & p: 0.186 & p: 0.291 & p: 0.471 & p: 0.019 & p: 0.076 \\
+\multicolumn{1}{|c|}{} & r: -0.034 & r: -0.074 & r: -0.073 & r: -0.045 & r: 0.097 & r: 0.063 \\
+\multicolumn{1}{|c|}{} & p: 0.513 & p: 0.154 & p: 0.156 & p: 0.385 & p: 0.06 & p: 0.219 \\
+\multicolumn{1}{|c|}{} & t: -0.656 & t: -1.431 & t: -1.422 & t: -0.872 & t: 1.886 & t: 1.233 \\
+\multicolumn{1}{|c|}{} & n: 378 & n: 378 & n: 378 & n: 378 & n: 378 & n: 378 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{script}} & rho: 0.062 & rho: 0.097 & rho: 0.105 & rho: 0.122 & rho: 0.181 & rho: 0.247 \\
+\multicolumn{1}{|c|}{} & p: 0.405 & p: 0.196 & p: 0.161 & p: 0.101 & p: 0.015 & p: 0.001 \\
+\multicolumn{1}{|c|}{} & r: 0.084 & r: 0.104 & r: 0.112 & r: 0.124 & r: 0.192 & r: 0.269 \\
+\multicolumn{1}{|c|}{} & p: 0.262 & p: 0.164 & p: 0.134 & p: 0.097 & p: 0.009 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & t: 1.129 & t: 1.402 & t: 1.511 & t: 1.671 & t: 2.631 & t: 3.746 \\
+\multicolumn{1}{|c|}{} & n: 181 & n: 181 & n: 181 & n: 181 & n: 181 & n: 181 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{unclassified}} & rho: 0.056 & rho: -0.015 & rho: 0.001 & rho: -0.018 & rho: 0.119 & rho: 0.105 \\
+\multicolumn{1}{|c|}{} & p: 0.147 & p: 0.688 & p: 0.985 & p: 0.637 & p: 0.002 & p: 0.006 \\
+\multicolumn{1}{|c|}{} & r: 0.08 & r: -0.022 & r: -0.001 & r: -0.018 & r: 0.1 & r: 0.101 \\
+\multicolumn{1}{|c|}{} & p: 0.037 & p: 0.572 & p: 0.978 & p: 0.641 & p: 0.009 & p: 0.008 \\
+\multicolumn{1}{|c|}{} & t: 2.092 & t: -0.566 & t: -0.028 & t: -0.466 & t: 2.61 & t: 2.642 \\
+\multicolumn{1}{|c|}{} & n: 678 & n: 678 & n: 678 & n: 678 & n: 678 & n: 678 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{category}} & rho: 0.112 & rho: 0.057 & rho: 0.054 & rho: 0.055 & rho: 0.129 & rho: 0.141 \\
+\multicolumn{1}{|c|}{} & p: 0.05 & p: 0.319 & p: 0.341 & p: 0.338 & p: 0.024 & p: 0.013 \\
+\multicolumn{1}{|c|}{} & r: 0.114 & r: 0.067 & r: 0.066 & r: 0.068 & r: 0.166 & r: 0.163 \\
+\multicolumn{1}{|c|}{} & p: 0.045 & p: 0.243 & p: 0.25 & p: 0.232 & p: 0.004 & p: 0.004 \\
+\multicolumn{1}{|c|}{} & t: 2.016 & t: 1.171 & t: 1.154 & t: 1.199 & t: 2.946 & t: 2.896 \\
+\multicolumn{1}{|c|}{} & n: 307 & n: 307 & n: 307 & n: 307 & n: 307 & n: 307 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{supraordinate}} & rho: 0.062 & rho: 0.011 & rho: 0.002 & rho: -0.03 & rho: 0.122 & rho: 0.073 \\
+\multicolumn{1}{|c|}{} & p: 0.39 & p: 0.88 & p: 0.978 & p: 0.673 & p: 0.091 & p: 0.312 \\
+\multicolumn{1}{|c|}{} & r: 0.036 & r: -0.005 & r: -0.038 & r: -0.047 & r: 0.134 & r: 0.113 \\
+\multicolumn{1}{|c|}{} & p: 0.614 & p: 0.947 & p: 0.604 & p: 0.511 & p: 0.063 & p: 0.118 \\
+\multicolumn{1}{|c|}{} & t: 0.507 & t: -0.067 & t: -0.522 & t: -0.66 & t: 1.875 & t: 1.576 \\
+\multicolumn{1}{|c|}{} & n: 194 & n: 194 & n: 194 & n: 194 & n: 194 & n: 194 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{instrument}} & rho: 0.077 & rho: -0.084 & rho: -0.122 & rho: -0.1 & rho: 0.102 & rho: 0.269 \\
+\multicolumn{1}{|c|}{} & p: 0.625 & p: 0.593 & p: 0.436 & p: 0.524 & p: 0.516 & p: 0.081 \\
+\multicolumn{1}{|c|}{} & r: 0.062 & r: -0.08 & r: -0.103 & r: -0.082 & r: 0.208 & r: 0.302 \\
+\multicolumn{1}{|c|}{} & p: 0.692 & p: 0.61 & p: 0.509 & p: 0.602 & p: 0.181 & p: 0.049 \\
+\multicolumn{1}{|c|}{} & t: 0.404 & t: -0.521 & t: -0.674 & t: -0.532 & t: 1.377 & t: 2.053 \\
+\multicolumn{1}{|c|}{} & n: 43 & n: 43 & n: 43 & n: 43 & n: 43 & n: 43 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{functional property}} & rho: -0.006 & rho: -0.048 & rho: 0.051 & rho: -0.034 & rho: 0.223 & rho: 0.182 \\
+\multicolumn{1}{|c|}{} & p: 0.953 & p: 0.632 & p: 0.615 & p: 0.736 & p: 0.025 & p: 0.069 \\
+\multicolumn{1}{|c|}{} & r: 0.05 & r: -0.053 & r: 0.0 & r: -0.043 & r: 0.238 & r: 0.178 \\
+\multicolumn{1}{|c|}{} & p: 0.62 & p: 0.601 & p: 1.0 & p: 0.669 & p: 0.017 & p: 0.075 \\
+\multicolumn{1}{|c|}{} & t: 0.5 & t: -0.528 & t: 0.0 & t: -0.431 & t: 2.451 & t: 1.809 \\
+\multicolumn{1}{|c|}{} & n: 101 & n: 101 & n: 101 & n: 101 & n: 101 & n: 101 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{bpa}} & rho: 0.143 & rho: -0.027 & rho: -0.017 & rho: -0.038 & rho: -0.008 & rho: -0.03 \\
+\multicolumn{1}{|c|}{} & p: 0.039 & p: 0.699 & p: 0.802 & p: 0.588 & p: 0.912 & p: 0.668 \\
+\multicolumn{1}{|c|}{} & r: 0.141 & r: -0.024 & r: -0.011 & r: -0.04 & r: -0.006 & r: -0.023 \\
+\multicolumn{1}{|c|}{} & p: 0.041 & p: 0.732 & p: 0.87 & p: 0.565 & p: 0.932 & p: 0.736 \\
+\multicolumn{1}{|c|}{} & t: 2.058 & t: -0.344 & t: -0.165 & t: -0.578 & t: -0.085 & t: -0.338 \\
+\multicolumn{1}{|c|}{} & n: 209 & n: 209 & n: 209 & n: 209 & n: 209 & n: 209 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{perceptual property}} & rho: 0.285 & rho: 0.003 & rho: -0.002 & rho: 0.07 & rho: 0.298 & rho: 0.306 \\
+\multicolumn{1}{|c|}{} & p: 0.001 & p: 0.971 & p: 0.98 & p: 0.413 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & r: 0.247 & r: 0.03 & r: -0.005 & r: 0.065 & r: 0.298 & r: 0.309 \\
+\multicolumn{1}{|c|}{} & p: 0.003 & p: 0.728 & p: 0.956 & p: 0.446 & p: 0.0 & p: 0.0 \\
+\multicolumn{1}{|c|}{} & t: 2.998 & t: 0.35 & t: -0.056 & t: 0.767 & t: 3.672 & t: 3.811 \\
+\multicolumn{1}{|c|}{} & n: 139 & n: 139 & n: 139 & n: 139 & n: 139 & n: 139 \\
+\hline
+\end{tabular}\\
+\begin{tabular}{ccccccc|}\cline{2-7}
+&\multicolumn{1}{|c}{LSAdiff} & w2vuk1 & w2vbig & w2vukfull & gloveWG100 & gloveTW100 \\\hline
+\multicolumn{1}{|c|}{\multirow{6}{*}{action}} & rho: -0.127 & rho: 0.451 & rho: 0.324 & rho: 0.418 & rho: 0.429 & rho: -0.044 \\
+\multicolumn{1}{|c|}{} & p: 0.68 & p: 0.122 & p: 0.28 & p: 0.156 & p: 0.144 & p: 0.887 \\
+\multicolumn{1}{|c|}{} & r: -0.321 & r: 0.325 & r: 0.247 & r: 0.282 & r: 0.362 & r: -0.042 \\
+\multicolumn{1}{|c|}{} & p: 0.284 & p: 0.278 & p: 0.415 & p: 0.35 & p: 0.224 & p: 0.892 \\
+\multicolumn{1}{|c|}{} & t: -1.175 & t: 1.191 & t: 0.885 & t: 1.02 & t: 1.346 & t: -0.145 \\
+\multicolumn{1}{|c|}{} & n: 13 & n: 13 & n: 13 & n: 13 & n: 13 & n: 13 \\
+\hline
+\end{tabular}\\
+\end{document}

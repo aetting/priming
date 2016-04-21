@@ -1,0 +1,24 @@
+
+PREDICTOR MODEL: LSA_diff
+
+ALL ITEMS: 5
+t: -0.336278,p: 0.753562
+R-squared: 0.027493
+R-squared (adj): -0.215633
+
+Spearman rho: -0.800000, p: 0.104088
+Pearson R: -0.744203, p: 0.149200
+
+
+PREDICTOR MODEL: w2v_small
+
+ALL ITEMS: 5
+t: 0.288037,p: 0.787626
+R-squared: 0.020320
+R-squared (adj): -0.224600
+
+Spearman rho: -0.900000, p: 0.037386
+Pearson R: -0.734742, p: 0.157309
+
+-------------
+
